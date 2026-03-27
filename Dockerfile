@@ -1,14 +1,5 @@
-# Use OpenJDK 17 lightweight image
-FROM eclipse-temurin:17-jdk-alpine
-
-# Set working directory
+FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
-
-# Copy correct JAR file
-COPY target/*.jar cse.jar
-
-# Expose application port
+COPY target/CseAwsDeploy-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8085
-
-# Run the application
-ENTRYPOINT ["java", "-jar", "/app/app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
