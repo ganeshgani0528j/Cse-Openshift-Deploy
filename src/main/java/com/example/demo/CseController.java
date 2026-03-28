@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class CseController {
 	@GetMapping("/home")
 	public String disp() {
-		return "WELCOME TO OPENSHIFT DEPLOYMENT";
+		return "WELCOME TO YDP sir";
 	}
 	
 
